@@ -1,11 +1,5 @@
 let elem=document.querySelector('.container');
-
 let btn=document.querySelector('button');
-
-
-
-
-
 let i=1;
 btn.addEventListener('click',function(){
     let p=document.createElement('p');
@@ -18,11 +12,10 @@ btn.addEventListener('click',function(){
     p.appendChild(bMinus);
     p.appendChild(span);
     bMinus.innerHTML='-';
-
+    
     for(let i=0; i<arr2.length; i++){
         arr2[i].innerHTML=''+(i+1);
-    }
-    
+    }   
 
     bMinus.addEventListener('click',function(){    
         elem.removeChild(p);
