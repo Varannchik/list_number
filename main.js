@@ -8,14 +8,17 @@ btn.addEventListener('click',function(){
     let input=document.querySelector('input').value; 
     let bMinus=document.createElement('button');
     let span=document.createElement('span');
-    let bArrow=document.createElement('button');
+    let bArrowUp=document.createElement('button');
+    let bArrowDown=document.createElement('button');
     div2.appendChild(p);
     p.innerHTML=input;
     p.appendChild(bMinus);
-    p.appendChild(bArrow);
+    p.appendChild(bArrowUp);
     p.appendChild(span);
+    p.appendChild(bArrowDown);
     bMinus.innerHTML='-';
-    bArrow.innerHTML='arrow';
+    bArrowUp.innerHTML='arrow UP';
+    bArrowDown.innerHTML='arrow Down';
     
     let arr2=document.querySelectorAll('span'); 
     for(let i=0; i<arr2.length; i++){
@@ -31,8 +34,12 @@ btn.addEventListener('click',function(){
         }
     });
 
-        bArrow.addEventListener('click',function(){        
+    
+    bArrowUp.addEventListener('click',function(){        
         div2.insertBefore(p, p.previousElementSibling);
+    });
+    bArrowDown.addEventListener('click',function(){        
+        div2.insertBefore(p, p.nextSibling.nextSibling);
     });        
 });
 
@@ -42,7 +49,6 @@ btn.addEventListener('click',function(){
 
 
 
-//div2.removeChild(h3);
 
 
 
